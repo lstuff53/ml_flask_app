@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "flaskmlaks-2a48"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "flaskmlaks-2a48"
+  template:
+    metadata:
+      labels:
+        app: "flaskmlaks-2a48"
+    spec:
+      containers:
+        - name: "flaskmlaks-2a48"
+          image: "flaskmlapp.azurecr.io/flaskmlaks"
+          ports:
+          - containerPort: 5000
