@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "flaskmlaks-2a48"
+    labels:
+        app: "flaskmlaks-2a48"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+      name: http
+    selector:
+        app: "flaskmlaks-2a48"
